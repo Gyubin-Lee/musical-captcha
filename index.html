@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Musical reCAPTCHA</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="captcha-container">
+        <h1>Musical reCAPTCHA</h1>
+        <p>Listen to the 5 notes and play them back in order.</p>
+        
+        <div class="controls">
+            <button id="play-button">Play Challenge 🎵</button>
+        </div>
+
+        <div id="piano">
+            <div class="key white" data-note="C4"><span>C</span></div>
+            <div class="key white" data-note="D4"><span>D</span></div>
+            <div class="key white" data-note="E4"><span>E</span></div>
+            <div class="key white" data-note="F4"><span>F</span></div>
+            <div class="key white" data-note="G4"><span>G</span></div>
+            <div class="key white" data-note="A4"><span>A</span></div>
+            <div class="key white" data-note="B4"><span>B</span></div>
+        </div>
+        <div id="user-input-display">Your input: </div>
+        <button id="submit-button">Submit Answer</button>
+        <p id="status-message"></p>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
