@@ -39,7 +39,11 @@ app.use(session({
     resave: false,
     saveUninitialized: true,
     // In production (HTTPS), cookies must be secure.
-    cookie: { secure: process.env.NODE_ENV === 'production' }
+    cookie: {
+        secure: process.env.NODE_ENV === 'production', // Must be true if sameSite is 'none'
+        // 'none' allows the cookie to be sent in cross-site requests (like from an iframe).
+        sameSite: process.env.NODE_ENV === 'production' ? 'none' : 'lax'
+    }
 }));
 
 /**
